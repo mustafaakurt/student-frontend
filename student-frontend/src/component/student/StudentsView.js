@@ -24,18 +24,18 @@ const StudentsView = () => {
     }
     return (
         <section>
-            <table>
+            <table className='table table-bordered table-hover'>
                 <thead>
-                    <tr>
+                    <tr className='text-center'>
                         <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
                         <th>Department</th>
-                        <th>Actions</th>
+                        <th colSpan="3">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='text-center'>
                     {students.map((student, index) => (
 
                     <tr key={student.id}>
@@ -46,16 +46,22 @@ const StudentsView = () => {
                         <td>{student.lastName}</td>
                         <td>{student.email}</td>
                         <td>{student.department}</td>
-                        <td>View</td>
-                        <td>Update</td>
-                        <td>Delete</td>
+                        <td className='mx-2'>
+                            <button className="btn btn-info">
+                            View
+                            </button>
+                        </td>
+                        <td className='mx-2'>
+                            <button className="btn btn-warning">
+                            Update
+                            </button>
+                        </td>
+                        <td className='mx-2'>
+                            <button className='btn btn-danger'>Delete</button>
+                        </td>
                     </tr>
-
                     ))}
-
-
                 </tbody>
-
             </table>
         </section>
   );
