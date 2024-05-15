@@ -7,6 +7,7 @@ import StudentsView from "./component/student/StudentsView";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddStudent from "./component/student/AddStudent";
 import EditStudent from "./component/student/EditStudent";
+import StudentPofile from "./component/student/StudentProfile";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
             exact
             path="/edit-student/:id"
             element={<EditStudent />}></Route>
+          <Route
+            exact
+            path="/student-profile/:id"
+            element={<StudentPofile />}></Route>
         </Routes>
       </Router>
     </main>

@@ -98,18 +98,21 @@ const EditStudent = () => {
           />
         </div>
 
-        <div className="row mb-2">
-          <button type="submit" className="btn btn-outline-success btn-lg">
-            Save
-          </button>
-        </div>
-        <div className="col-sm-2">
-          <Link
-            to={"/view-students"}
-            type="submit"
-            className="btn btn-outline-warning btn-lg">
-            Cancel
-          </Link>
+        <div className="row mb-5">
+          <div className="col-sm-2">
+            <button type="submit" className="btn btn-outline-success btn-lg">
+              Save
+            </button>
+          </div>
+
+          <div className="col-sm-2">
+            <Link
+              to={"/view-students"}
+              type="submit"
+              className="btn btn-outline-warning btn-lg">
+              Cancel
+            </Link>
+          </div>
         </div>
       </form>
     </div>
