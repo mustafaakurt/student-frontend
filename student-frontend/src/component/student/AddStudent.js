@@ -19,8 +19,14 @@ const AddStudent = () => {
 
   const saveStudent = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/api/student", student);
-    navigate("/view-students");
+    try {
+      await axios.post("http://localhost:8080/api/student", student);
+      navigate("/view-students");
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        alert("Bu email adresi kullanımda, lütfen farklı bir email deneyin. ");
+      }
+    }
   };
 
   return (
