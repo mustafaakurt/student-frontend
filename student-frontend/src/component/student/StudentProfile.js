@@ -58,7 +58,7 @@ const StudentPofile = () => {
 
                 <div className="row">
                   <div className="col-sm-3">
-                    <h5 className="mb-0">First Nmae</h5>
+                    <h5 className="mb-0">First Name</h5>
                   </div>
 
                   <div className="col-sm-9">
